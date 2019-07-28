@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<select name="">
+			<option value="">足球</option>
+			<option value="">篮球</option>
+			<option value="">排球</option>
+		</select>
+		<button class="box">篮球</button>
+		<script type="text/javascript">
+			var box = document.getElementsByClassName('box')[0];
+			var sec = document.getElementsByTagName('select')[0];
+			box.onclick = function () {
+				for (var i = 0; i < sec.options.length; i++) {
+					if (sec.options[i].innerText == box.innerHTML) {
+						sec.options[i].selected = true
+					}
+				}
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<select name="">
+			<option value="">足球</option>
+			<option value="">篮球</option>
+			<option value="">排球</option>
+		</select>
+		<button class="add">添加</button>
+		<input type="" class="box" name="" id="" value="" />
+		<script type="text/javascript">
+			var sec = document.getElementsByTagName('select')[0];
+			var box = document.getElementsByClassName('box')[0];
+			var add = document.getElementsByClassName('add')[0];
+			add.onclick = function () {
+				box.value += sec.options[sec.selectedIndex].text
+			}
+			
+		</script>
+	</body>
+</html>

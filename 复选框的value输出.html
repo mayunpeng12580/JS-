@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="#" method="post">
+			足球：<input type="checkbox" name="" id="" value="足球" />
+			篮球：<input type="checkbox" name="" id="" value="篮球" />
+			排球：<input type="checkbox" name="" id="" value="排球" />
+		</form>
+		<button class="sure">提交订单</button>
+		<div class="box">11</div>
+		<script type="text/javascript">
+			var sure = document.getElementsByClassName('sure')[0];
+			var box = document.getElementsByClassName('box')[0];
+			
+			sure.onclick = function () {
+			var y = '';
+				var inp = document.getElementsByTagName('input');
+				for (var i = 0; i < inp.length; i++) {
+				console.log(11)
+					if (inp[i].checked) {
+						y += inp[i].value
+						console.log(y)
+					}
+					box.innerText = '您选择的是' + y
+				}
+			}
+			
+		</script>
+	</body>
+</html>

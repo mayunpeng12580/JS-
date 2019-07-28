@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<select name="">
+			<option value="">足球</option>
+			<option value="">篮球</option>
+			<option value="">排球</option>
+		</select>
+		<button class="rem">删除</button>
+		<script type="text/javascript">
+			var rem = document.getElementsByClassName('rem')[0];
+			var sec = document.getElementsByTagName('select')[0];
+			rem.onclick = function () {
+				console.log(sec.options[sec.selectedIndex])
+				sec.remove(sec.selectedIndex)
+			}
+		</script>
+	</body>
+</html>

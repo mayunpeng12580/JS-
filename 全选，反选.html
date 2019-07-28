@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="#" method="post">
+			
+			<label for="">足球：<input type="checkbox" name="" id="" value="足球" /></label>
+			<label for="">篮球：<input type="checkbox" name="" id="" value="篮球" /></label>
+			<label for="">排球：<input type="checkbox" name="" id="" value="排球" /></label>
+		</form>
+		<button class="all">全选</button>
+		<button class="no_all">全不选</button>
+		<button class="un_all">反选</button>
+		<script type="text/javascript">
+			var all = document.getElementsByClassName('all')[0];
+			var no_all = document.getElementsByClassName('no_all')[0];
+			var un_all = document.getElementsByClassName('un_all')[0];
+			var inp = document.getElementsByTagName('input')
+			console.log(inp)
+			all.onclick = function () {
+				for (var i = 0 ; i < inp.length; i++) {
+					inp[i].checked = true
+				}
+			}
+			no_all.onclick = function () {
+				for (var i = 0 ; i < inp.length; i++) {
+					inp[i].checked = false
+				}
+			}
+			un_all.onclick = function () {
+				for (var i = 0 ; i < inp.length; i++) {
+					inp[i].checked = !inp[i].checked
+				}
+			}
+		</script>
+	</body>
+</html>

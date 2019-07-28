@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<select name="">
+			<option value="">足球</option>
+			<option value="">篮球</option>
+			<option value="">排球</option>
+		</select>
+		<div class="box"></div>
+		<script type="text/javascript">
+			var box = document.getElementsByClassName('box')[0]
+			var sec = document.getElementsByTagName('select')[0]
+			sec.onchange = function () {
+				box.innerHTML = sec.options[sec.selectedIndex].innerHTML
+			}
+		</script>
+	</body>
+</html>

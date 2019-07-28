@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p></p>
+		<script type="text/javascript">
+			var p = document.getElementsByTagName('p')[0];
+			var time = new Date();
+			var y = time.getFullYear();
+			var m = time.getMonth();
+			var d = time.getDay();
+			var H = time.getHours();
+			var M = time.getMinutes();
+			var S = time.getSeconds();
+			p.innerHTML = y + '年' + (m+1) + '月' + d + '日' + H + '时' + M + '分' + S + '秒';
+		</script>
+	</body>
+</html>

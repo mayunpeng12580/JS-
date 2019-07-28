@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr = [12, 51, 666, 455,10, 444, 566, 1];
+			for (var j = 0; j < arr.length; j++) {
+				for (var i = 0; i < arr.length-1; i++) {
+					if (arr[i] > arr[i+1]) {
+						var tmp = arr[i];
+						arr[i] = arr[i+1];
+						arr[i+1] = tmp;
+					}
+				}
+			}
+			console.log(arr)
+		</script>
+	</body>
+</html>

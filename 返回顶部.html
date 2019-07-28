@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				padding-left: 200px;
+			}
+			.go_top {
+				width: 150px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				font-size: 24px;
+				color: #8A2BE2;
+				opacity: 0.8;
+				background-color: #9ACD32;
+				position: fixed;
+				bottom: 5%;
+				right: 5%;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>第一行</h1>
+		<h1>第二行</h1>
+		<h1>第三行</h1>
+		<h1>第四行</h1>
+		<h1>第五行</h1>
+		<h1>第六行</h1>
+		<h1>第七行</h1>
+		<h1>第八行</h1>
+		<h1>第九行</h1>
+		<h1>第十行</h1>
+		<h1>第一行</h1>
+		<h1>第二行</h1>
+		<h1>第三行</h1>
+		<h1>第四行</h1>
+		<h1>第五行</h1>
+		<h1>第六行</h1>
+		<h1>第七行</h1>
+		<h1>第八行</h1>
+		<h1>第九行</h1>
+		<h1>第十行</h1>
+		<button class="go_top">返回顶部</button>
+		<script type="text/javascript">
+			var btn = document.getElementsByClassName('go_top')[0];
+			btn.onclick = function () {
+				var t = setInterval(run, 50);
+				function run() {
+					var top = document.body.scrollTop;
+					top -= top/5;
+					if (document.body.scrollTop == 0) {
+						clearInterval(t)
+					}
+					document.body.scrollTop = top;
+				};
+			};
+		</script>
+	</body>
+</html>

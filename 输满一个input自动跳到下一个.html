@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" maxlength="5" oninput="run(this.value)" name="" id="" value="" />
+		<input type="text" maxlength="6" oninput="run(this.value)" name="" id="" value="" />
+		<input type="text" maxlength="7" name="" id="" value="" />
+		<script type="text/javascript">
+			var inp = document.querySelectorAll('input')
+			function run(a) {
+				for (var i = 0; i < inp.length; i++) {
+					if(inp[i].value.length == inp[i].maxLength) {
+						inp[i+1].focus();
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

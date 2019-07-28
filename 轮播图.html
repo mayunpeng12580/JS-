@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>轮播图</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .box {
+      width: 300px;
+      height: 150px;
+      margin: 50px auto;
+      border: 5px red solid;
+      position: relative;
+      overflow: hidden;
+    }
+    .box ul {
+      width: 1200px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .box ul li {
+      float: left;
+    }
+    .box ul li img {
+      width: 300px;
+      height: 150px;
+    }
+    .left, .right {
+      cursor: pointer;
+      z-index: 2222;
+      font-size: 30px;
+      font-weight: blod;
+      text-align: center;
+      line-height: 50px;
+      width: 50px;
+      height: 50px;
+      opacity: 0.8;
+      position: absolute;
+      left: 0;
+      top:50px;
+      background-color: #333333;
+      display: none;
+    }
+    .right {
+      left: 250px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class = 'left'>←</div>
+    <ul>
+      <li><img src="imgs/banner1.jpg" alt=""></li>
+      <li><img src="imgs/banner4.jpg" alt=""></li>
+      <li><img src="imgs/banner3.jpg" alt=""></li>
+      <li><img src="imgs/banner5.jpg" alt=""></li>
+    </ul>
+    <div class = 'right'>→</div>
+  </div>
+  <script>
+    var ul = document.getElementsByTagName('ul')[0];
+    var box = document.getElementsByClassName('box')[0];
+    var left = document.getElementsByClassName('left')[0];
+    var right = document.getElementsByClassName('right')[0];
+    var t = setInterval(run, 3000);
+    var i = 0;
+    function run() {
+      i = (i + 1) % 4;
+      ul.style.left = i * -300 + 'px';
+    };
+    
+    box.onmouseover = function () {
+      console.log(111)
+      clearInterval(t);
+      left.style.display = 'block';
+      right.style.display = 'block';
+    }
+    box.onmouseout = function () {
+      t = setInterval(run, 3000);
+      left.style.display = 'none';
+      right.style.display = 'none';
+    }
+    left.onclick = function () {
+      i = i == 0 ? 4 : i 
+      i = (i - 1) % 4;
+      ul.style.left = i * -300 + 'px';
+    }
+    right.onclick = function () {
+      i = i == 4 ? 0 : i 
+      i = (i + 1) % 4;
+      ul.style.left = i * -300 + 'px';
+    }
+
+
+  </script>
+</body>
+</html>

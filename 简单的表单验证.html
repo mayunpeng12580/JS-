@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="#" method="post">
+			<input type="text" maxlength="10" name="" id="" value="" />不超过五个字
+			<input type="number"  maxlength="10" name="" id="" value="" />不超过10
+			<button class="sure">提交</button>
+		</form>
+		<script type="text/javascript">
+			var sure = document.getElementsByClassName('sure')[0];
+			var user = document.querySelector('[type=text]');
+			var sex = document.querySelector('[type=number]');
+			sure.onclick = function () {
+				if (user.value.length > 5) {
+					alert('不得超过5个字符！！！');
+					return false
+				} else if(sex.value < 1 || sex.value > 10){
+					alert('不得超过10,不得小于1！！！');;
+					return false
+				} else {
+					alert('提交成功！！！')
+					return false;
+				}
+			}
+			
+		</script>
+	</body>
+</html>

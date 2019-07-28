@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="#" method="post">
+			足球<input type="radio" name="a" onclick="sure(this.value)" id="" value="足球" />
+			篮球<input type="radio" onclick="sure(this.value)" name="a" id="" value="篮球" />
+			排球<input type="radio" onclick="sure(this.value)" name="a" id="" value="排球" />
+
+		</form>
+		<div id="box">
+			
+		</div>
+		<script type="text/javascript">
+			var form = document.getElementsByTagName('form')[0].a
+			var box = document.querySelector('#box')
+			
+			function sure(a) {
+				box.innerHTML = a
+			}
+		</script>
+	</body>
+</html>
