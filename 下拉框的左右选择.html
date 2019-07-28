@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.left, .right {
+				overflow: hidden;
+				float: left;
+			}
+			.left select, .right select {
+				width: 100px;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="left">
+			<select name="" multiple="multiple" class="left_box">
+				<option value="">星期一</option>
+				<option value="">星期二</option>
+				<option value="">星期三</option>
+				<option value="">星期四</option>
+				<option value="">星期五</option>
+				<option value="">星期六</option>
+				<option value="">星期日</option>
+			</select>
+			<br />
+			<button class="left_add">添加到右边</button>
+			<br />
+			<button class="all_left_add">全部添加到右边</button>
+		</div>
+		<div class="right">
+			<select name="" multiple="multiple" class="right_box"></select>
+			<br />
+			<button class="right_add">添加到左边</button>
+			<br />
+			<button class="all_right_add">全部添加到左边</button>
+		</div>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".left_add").on('click', function () {
+				$(".right_box").append($(".left_box option:selected"))
+			})
+			$(".right_add").on('click', function () {
+				$(".left_box").append($(".right_box option:selected"))
+			})
+			$(".all_left_add").on('click', function () {
+				$(".right_box").append($(".left_box option"))
+			})
+			$(".all_right_add").on('click', function () {
+				$(".left_box").append($(".right_box option"))
+			})
+		</script>
+	</body>
+</html>
